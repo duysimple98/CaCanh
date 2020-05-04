@@ -1,0 +1,48 @@
+
+ {% extends "layouts/index.html" %}
+{% load static %}
+{% block content %}
+<div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({% static 'homepages/img/bg-img/24.jpg' %});">
+            <h2>Đăng ký</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Trang Chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Đăng ký</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+            <div class="row">
+                <div class="col-9">
+   <div class="panel panel-default">
+    <div class="panel-heading" style="margin-top:-1px;text-align:center">ĐĂNG KÝ THÀNH VIÊN</div>
+    <div class="panel-body">
+        <form id="form1" class="form-horizontal"  method ="POST">
+         {% csrf_token %}
+           {{form.as_p}}
+        
+            <div class="form-group">
+                <label class="control-label col-sm-6"></label>
+                <div class="col-sm-12">          
+                    <input type="submit" class="btn btn-primary" value= 'Đăng ký'>
+                </div>
+            </div>          
+        </form>
+    </div>
+  
+</div>
+</div>
+</div>
+</div>
+{% endblock%}

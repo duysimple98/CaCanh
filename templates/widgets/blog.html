@@ -1,0 +1,40 @@
+   {% load static %}
+ <section class="alazea-blog-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2>TIN TỨC MỚI</h2>
+                        <p>Tin Tức mới trong ngày được cập nhập nhanh nhất</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                 {% for obj in latest %}
+                <!-- Single Blog Post Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-post mb-100">
+                        <div class="post-thumbnail mb-30">
+                            <a href="/home/tintucdetail/{{post.id}}"><img src="{% static 'media/'%}{{obj.thumbnail}}" alt="" style="width:400px;height:255px;"></a>
+                        </div>
+                        <div class="post-content">
+                            <a href="/home/tintucdetail/{{post.id}}" class="post-title">
+                                <h5>{{ obj.title }}</h5>
+                            </a>
+                            <div class="post-meta">
+                                <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ obj.timestamp }} </a>
+                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{ obj.author }}</a>
+                            </div>
+                            <p class="post-excerpt">{{ obj.overview|linebreaks|truncatechars:200 }}</p>
+                        </div>
+                    </div>
+                </div>
+ {% endfor %}
+         
+             
+
+            </div>
+        </div>
+    </section>

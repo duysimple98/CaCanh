@@ -1,0 +1,21 @@
+   {% load static %}
+    
+      <div class="single-widget-area">
+                            <!-- Title -->
+                            <div class="widget-title">
+                                <h4>Tin mới</h4>
+                            </div>
+                {% for post in most_recent %}
+                            <!-- Single Latest Posts -->
+                            <div class="single-latest-post d-flex align-items-center">
+                                <div class="post-thumb">
+                                    <img src="{% static 'media/'%}{{post.thumbnail}}" alt="">
+                                </div>
+                                <div class="post-content">
+                                    <a href="/home/tintucdetail/{{post.id}}" class="post-title">
+                                        <h6>{{ post.title }}</h6>
+                                    </a>
+                                    <a href="#" class="post-date">{{ post.timestamp }}</a>
+                                </div>
+                            </div>
+ {% endfor %}

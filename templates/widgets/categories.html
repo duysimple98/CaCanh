@@ -1,0 +1,16 @@
+
+<div class="shop-widget catagory mb-50">
+                            <h4 class="widget-title">Danh Mục </h4>
+                            <div class="widget-desc">
+                            {% for itemCat in categories %}
+                                <!-- Single Checkbox -->
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <ul>
+                                    <li ><a href ='/home/productcat/{{itemCat.cat_id}}'>{{itemCat.cat_name}}</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Single Checkbox -->
+                               {% endfor %}
+                            </div>
+                        </div>

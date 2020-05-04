@@ -1,0 +1,106 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+{% block content %}
+<div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({% static 'homepages/img/bg-img/24.jpg' %});">
+            <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Trang Chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Liên Hệ</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Contact Area Info Start ##### -->
+    <div class="contact-area-info section-padding-0-100">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Contact Thumbnail -->
+                <div class="col-12 col-md-6">
+                    <div class="contact--thumbnail">
+                        <img src="{% static 'homepages/img/bg-img/25.1.jpg' %}" alt="" style="height: 400px;width: 600px;">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5">
+                    <!-- Section Heading -->
+                    <div class="section-heading">
+                        <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                        <p>Chúng tôi đang cải thiện dịch vụ của mình để phục vụ bạn tốt hơn.</p>
+                    </div>
+                    <!-- Contact Information -->
+                    <div class="contact-information">
+                        <p><span>Address:</span> 107/13 Đường số 19, Khu phố 4, P.Hiệp Bình Chánh, Q.Thủ Đức</p>
+                        <p><span>Phone:</span> 0366927218</p>
+                        <p><span>Email:</span> nguyenconghoangvu1@gmail.com</p>
+                        <p><span>Open hours:</span>Full Week from Monday - Sunday </p>
+                        <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Contact Area Info End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg-5">
+                    <!-- Section Heading -->
+                    <div class="section-heading">
+                        <h2>LIÊN LẠC</h2>
+                        <p>Gửi tin nhắn cho chúng tôi, chúng tôi sẽ trả lời lại sau</p>
+                    </div>
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area mb-100">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn alazea-btn mt-15">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <!-- Google Maps -->
+                    <div class="map-area mb-100">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d823.8289469409792!2d106.71972436037922!3d10.825619723229883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528817af0ab67%3A0x1552ee6bdabcc3b9!2zMTA3LCAxMyBT4buRIDE5LCBIaeG7h3AgQsOsbmggQ2jDoW5oLCBUaOG7pyDEkOG7qWMsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1574781498865!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

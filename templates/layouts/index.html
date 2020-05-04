@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "../widgets/metadata.html" %}
+
+<body>
+    <!-- Preloader -->
+
+{% include "../widgets/Preleader.html" %}
+    <!-- ##### Header Area Start ##### -->
+{% include "../widgets/header.html" %}
+    <!-- ##### Header Area End ##### -->
+
+    {% block content %}
+
+    {% endblock %}
+    
+    <!-- ##### Hero Area Start ##### -->
+    <!-- ##### Footer Area Start ##### -->
+    {% include "../widgets/footer.html" %}
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'homepages/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'homepages/js/bootstrap/popper.min.js'%}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'homepages/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'homepages/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'homepages/js/active.js' %}"></script>
+    
+
+<script src='{% static "js/highlight.pack.js" %}'></script>
+    <script>
+        $(document).ready(function(){
+            
+        });
+        function addCart(id){
+            num = $("#number").val();
+            if(!num){
+                num = 1;
+            }
+            $.post('/home/addcart',{'id':id,'num':num, 'csrfmiddlewaretoken' : {{ csrf_token }},function(data) 
+            {
+                 alert("Bạn cừa mua sản phẩm");
+            });
+        }    
+    </script>    
+    </body>
+</html>

@@ -1,0 +1,43 @@
+ {% load static %}
+ <div class="related-products-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2>Sản phẩm liên quan</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            {%for other in otherPro%}
+                <!-- Single Product Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-product-area mb-100">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                            <a href="/home/productdetail/{{other.pro_id}}"><img src="{% static 'media/'%}{{other.pri_image}}" style="width:300px;height:170px;" alt=""></a>
+                            <!-- Product Tag -->
+                            <div class="product-tag">
+                                <a href="#">Hot</a>
+                            </div>
+                            <div class="product-meta d-flex">
+                                <a href="/home/productdetail/{{other.pro_id}}" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
+                                <a href="/home/productdetail/{{other.pro_id}}" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                            </div>
+                        </div>
+                        <!-- Product Info -->
+                        <div class="product-info mt-15 text-center">
+                            <a href="/home/productdetail/{{other.pro_id}}">
+                                <p>{{other.pro_name}}</p>
+                            </a>
+                            <h6>{{other.pro_price}}</h6>
+                        </div>
+                    </div>
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
